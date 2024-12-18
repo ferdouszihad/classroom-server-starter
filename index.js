@@ -42,7 +42,7 @@ async function run() {
 
     // Add Bulk Data {Run it only once}
     const data = require("./data.json");
-    console.log(data);
+    // console.log(data);
     app.get("/add-student-script", async (req, res) => {
       const result = await studentCollection.deleteMany();
       res.send(result);
