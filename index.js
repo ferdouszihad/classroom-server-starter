@@ -44,7 +44,7 @@ async function run() {
     const data = require("./data.json");
     // console.log(data);
     app.get("/add-student-script", async (req, res) => {
-      const result = await studentCollection.deleteMany();
+      const result = await studentCollection.insertMany(data);
       res.send(result);
     });
 
